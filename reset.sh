@@ -1,7 +1,7 @@
 #! /bin/bash
 
 
-servicename="docker"
+servicename="someservice"
 url="http://localhost:8080/stat"
 
 # This function checks the service status

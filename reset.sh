@@ -15,7 +15,7 @@ check_svc(){
 # This function checks the memory usage
 check_mem() {
 
-    echo $(free -m | head -n 2 | tail -n 1 | tr -s " " | cut -d " " -f 3)
+    echo $(free -g | head -n 2 | tail -n 1 | tr -s " " | cut -d " " -f 3)
 }
 
 
@@ -41,7 +41,7 @@ else
 fi
 
 
-if check_svc && [ $(check_mem) -gt 512 ]
+if check_svc && [ $(check_mem) -gt 5 ]
 then
     echo "Mem High Restart the service"
     systemctl restart someservice
